@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* creation de la nav bar */
+nav {
+    background: darkslategray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 1.5vm);
+}
+/* creation du tableau */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+/* creation de l'icone */
+#icons {
+    cursor: pointer;
+    display: none;
+}
+/* responsive quand la page passe en-dessous de 650px */
+@media (max-width: 650px){
+    #icons {
+        display: block;
+    }
+    #icons::before {
+        content: "\2756";
+    }
+    .active #icons:before{
+        content: "\2727";
+    }
+    nav ul {
+        z-index: 1000;
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        background: darkslategray;
+        width: 100%;
+        transition: 0.50s;
+        display: flex;
+    }
+
+    nav li {
+        padding: 3px 0;
+    }
+    nav li:hover {
+        background-color: rgb(108, 182, 182);
+    }
+    nav.active ul {
+        left: 0
+    }
+}
+
+
+body{
+    background-image: url(https://r4.wallpaperflare.com/wallpaper/745/275/693/man-made-street-diagon-alley-harry-potter-wallpaper-a5dfa360b889f7b2655fcf6e0cb0483e.jpg);
+    background-size: cover;
+    height:200vh;
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* Met le texte au centre de l'image et met la couleur "aliceblue"*/
+.persos {
+    text-align: center;
+    color: aliceblue;
+    width: 10px;
+}
+/* créer une grille 3 colonne à 100% de la page */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    width: 100vw;
+    height: 100%; 
+    }
+/* fait un fond bleu en transparence avec des bordure noir */
+.grid-item {
+    background-color: rgba(35, 45, 153, 0.377);
+    border: 5px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* pour définir la taille des images */
+img{
+    width:200px;
+    height: auto;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="flex">
+        <nav id="nav">
+            <!-- Le titre de la nav plus le logo -->
+            <h3>Harry Potter Collection &#10051;</h3>
+            <ul>
+                <li>
+                    <!-- affiche le "Acceuil" sur la page-->
+                    <a href="index.html">Acceuil</a>
+                </li>
+                <li>
+                    <!-- affiche le "Ma collection" sur la page-->
+                    <a href="collection.html">Ma Collection</a>
+                </li>
+                <li>
+                    <!-- affiche le "contact" sur la page-->
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <!-- affiche le "à propos" sur la page-->
+                    <a href="apropros.html">à propos</a>
+                </li>
+            
+                <li>
+                    <!-- affiche le "à propos" sur la page-->
+                    <a href="login.html">login</a>
+                </li>
+            </ul>
+            <div id="icons"></div>
+        </nav>
+    <!-- création d'un carroussel automatique -->
+        <div id="bas">
+            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+            centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide><img src="image/1.jpg" alt="#" class="a"></swiper-slide>
+            <swiper-slide><img src="image/2.jpg" alt="#" class="a"></swiper-slide>
+            <swiper-slide><img src="image/3.jpg" alt="#" class="a"></swiper-slide>
+            <swiper-slide><img src="image/4.jpg" alt="#" class="a"></swiper-slide>
+            <swiper-slide><img src="image/5.jpg" alt="#" class="a"></swiper-slide>
+            <swiper-slide><img src="image/6.jpg" alt="#" class="a"></swiper-slide>
+            <swiper-slide><img src="image/10.jpg" alt="#" class="a"></swiper-slide>
+        </swiper-container>
+        
+        
+        </div>
+    </div>
+    <!-- création du bouton dark Mode -->
+        <button id="Dark">Dark Mode</button>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script src="script.js"></script>
+</body>
+</html>

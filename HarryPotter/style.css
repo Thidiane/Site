@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* creation de la nav bar */
+nav {
+    background: darkslategray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 1.5vm);
+}
+/* creation du tableau */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+/* creation de l'icone */
+#icons {
+    cursor: pointer;
+    display: none;
+}
+/* responsive quand la page passe en-dessous de 650px */
+@media (max-width: 650px){
+    #icons {
+        display: block;
+    }
+    #icons::before {
+        content: "\2756";
+    }
+    .active #icons:before{
+        content: "\2727";
+    }
+    nav ul {
+        z-index: 1000;
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        background: darkslategray;
+        width: 100%;
+        transition: 0.50s;
+        display: flex;
+    }
+
+    nav li {
+        padding: 3px 0;
+    }
+    nav li:hover {
+        background-color: rgb(108, 182, 182);
+    }
+    nav.active ul {
+        left: 0
+    }
+}
+
+/*Swiper*/
+body.bas {
+    position: relative;
+    height: 100%;
+    flex-direction: column-reverse;
+    }
+
+    body.bas {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    }
+/* création du container du swiper */
+    swiper-container {
+    width: 100%;
+    height: 100%;
+    }
+
+    swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+/* création de l'image */
+    swiper-slide image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+.a {
+    width: 50%;
+    height: 50%;
+}
+/* création du dark mode */
+#Dark {
+    background-color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border-color: darkslategray;
+}

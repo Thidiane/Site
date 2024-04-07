@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav {
+    background: darkslategray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 1.5vm);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+#icons {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 650px){
+    #icons {
+        display: block;
+    }
+    #icons::before {
+        content: "\2756";
+    }
+    .active #icons:before{
+        content: "\2727";
+    }
+    nav ul {
+        z-index: 1000;
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        background: darkslategray;
+        width: 100%;
+        transition: 0.50s;
+        display: flex;
+    }
+
+    nav li {
+        padding: 3px 0;
+    }
+    nav li:hover {
+        background-color: rgb(108, 182, 182);
+    }
+    nav.active ul {
+        left: 0
+    }
+}
+
+body{
+    background-image: url(https://uswalldecor.com/cdn/shop/files/RMK12541M.jpg?v=1695066227);
+    background-size: cover;
+    height:200vh;
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* création de la box 1 */
+#box1{
+    display: flexbox;
+    background-color: rgba(237, 253, 15, 0.300);
+    width: 33%;
+    height: 20vh;
+    padding: 3px;
+    box-shadow: 0px 10px 10px black ;
+   
+}
+/* création de la box 2 */
+#box2{
+    display: flexbox;
+    background-color: rgba(237, 253, 15, 0.300);
+    width: 33%;
+    height: 20vh;
+    padding: 3px;
+    box-shadow: 0px 10px 10px black ;
+
+}
+/* création de la box 3 */
+#box3{
+    display: block;
+    background-color: rgba(237, 253, 15, 0.300);
+    width: 33%;
+    height: 20vh;
+    padding: 3px;
+    box-shadow: 0px 10px 10px black ;
+
+
+}
+
+.flex-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
